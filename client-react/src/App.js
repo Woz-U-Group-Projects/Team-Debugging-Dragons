@@ -5,7 +5,7 @@ import Users from './components/Users';
 
 
 
-export default App = () => {
+export default function App(props) {
   return (
     <div className="App">
       <Users />

@@ -27,7 +27,7 @@ public class UserController {
 
   @Autowired
  UserRepository userRepository;
-
+ @CrossOrigin(origins = "http://localhost:3000")
   @GetMapping()
   public List<User> getUsers() {
     return userRepository.findAll();
@@ -52,7 +52,6 @@ public class UserController {
   public void deleteTask(@PathVariable Long id) {
    userRepository.deleteById(id);
   }
-  @CrossOrigin(origins = "http://localhost:3000/users")
   @PutMapping("/{id}")
   public User updateProject(@PathVariable Long id, @RequestBody User user) {
    User foundUser = userRepository.findById(id).orElse(null);
