@@ -31,7 +31,6 @@ return (
 <li key={user.id}>{user.username}</li>
        ))}
    </ul>
-   <h3>Add new user</h3>
     </div>
 );
 }
